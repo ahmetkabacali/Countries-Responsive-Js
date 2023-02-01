@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+@import url("../css/details.css");
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+ *::before, *::after {
+     box-sizing: border-box;
+}
+ html {
+     font-size: 10px;
+}
+ body {
+     font-family: 'Nunito Sans', sans-serif;
+    /*300 600 800*/
+     background-color: #202C36;
+     color: white;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     font-size: 1.4rem;
+     max-width: 144rem;
+}
+ .container {
+     padding: 0 5.55%;
+     height: 100%;
+     max-width: 128rem;
+}
+ img {
+     width: 100%;
+     height: 100%;
+     display: block;
+     object-fit: cover;
+}
+ li {
+     list-style: none;
+}
+ .hidden {
+     display: none;
+}
+ .effected:hover {
+     transform: scale(1.1);
+     color: chocolate;
+     transition: all 0.3s;
+     cursor: pointer;
+}
+/********* Header *********/
+ header {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 8rem;
+}
+ .header-container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: #2B3844;
+     width: 100%;
+}
+ .heading {
+     font-size: 2.4rem;
+     font-weight: 800;
+}
+ .theme-box {
+     font-size: 1.6rem;
+}
+/********* Main *********/
+ .search-filter {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 4rem 0;
+}
+ .search-bar, .filter-box {
+     background-color: #2B3844;
+     height: 5.6rem;
+}
+ .search-bar{
+     min-width: 20rem;
+}
+ .search-bar {
+     display: flex;
+     align-items: center;
+     width: 37.5%;
+}
+ .search-bar:hover {
+     cursor: pointer !important;
+}
+ #searchInput {
+     background-color: inherit;
+     width: 100%;
+     height: 100%;
+     border: none;
+     color: inherit;
+     font-size: 1.8rem;
+     outline: 0;
+}
+ #searchInput::placeholder {
+     font-size: 1.4rem;
+}
+ label[for="searchInput"] {
+     padding: 1.5rem 1.5rem;
+     height: 100%;
+     font-size: 1.8rem;
+}
+/* */
+ .filter-box {
+     position: relative;
+     padding: 2rem;
+     display: inline-block;
+}
+ .region-filter {
+     background-color: inherit;
+     color: white;
+     border: none;
+}
+ .region-filter:hover {
+     color: chocolate;
+     cursor: pointer;
+     transition: all 0.3s;
+}
+ .regionSelect-content {
+    /* display: none;
+     */
+    /*hiding*/
+     position: absolute;
+     z-index: 1;
+     margin-top: 2rem;
+     background-color: #2B3844;
+     width: 100%;
+     left: 0;
+     padding: 2rem 0;
+}
+ .regionSelect-content .region {
+     padding: 0.5rem 2rem;
+}
+/* */
+ .country-container {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 5rem;
+}
+ .country {
+     box-shadow: rgba(100, 100, 111, 0.2) 0 0.7rem 2.9rem 0;
+     border-radius: 1rem;
+     min-height: 33.6rem;
+     min-width: 20rem;
+     background-color: #2B3844;
+     font-weight: 600;
+}
+ .country-title {
+     padding: 2rem 0;
+     font-size: 1.8rem;
+     font-weight: 800;
+}
+ .country-specs li {
+     list-style-type: none;
+     line-height: 2.3rem;
+}
+ .flag-wrapper {
+     height: 16rem;
+}
+ .flag-wrapper img{
+     border-radius: 1rem;
+}
+ .flag-wrapper:hover {
+     cursor: pointer;
+     transform: scale(1.1);
+     transition: all 0.3s ease-in-out;
+}
+ .country-content {
+     padding: 0rem 2rem;
+}
+ 

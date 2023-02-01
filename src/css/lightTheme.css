@@ -1,0 +1,19 @@
+body {
+    background-color: #F2F2F2;
+    color: #111517;
+
+}
+
+.header-container,
+.country,
+.filter-box,
+.search-bar,
+.region-filter,
+.regionSelect-content {
+    background-color: white;
+    color: #111517;
+}
+
+.detail-body-item span {
+    color: #111517;
+}

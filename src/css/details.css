@@ -1,0 +1,74 @@
+#backBtn {
+    background-color: #2B3844;
+    padding: 1rem 2.3rem;
+    color: white;
+    font-size: 1.6rem;
+    border-radius: 0.7rem;
+    border: none;
+    cursor: pointer;
+    width: 13.6rem;
+    height: 5.6rem;
+    margin: 4rem 0;
+}
+#backBtn:hover {
+    color: chocolate;
+    transition: all 0.3s;
+}
+#backBtn i {
+    margin-right: rem;
+    vertical-align: middle;
+}
+.country-details-card {
+    display: grid;
+    grid-template-columns: max(45%) auto;
+    gap: 15rem;
+}
+.country-detail-desc {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    align-items: center;
+    gap: 0rem 7rem;
+    justify-self: end;
+    font-size: 1.6rem;
+}
+.detail-heading {
+    grid-column: 1 / 3;
+    font-weight: 800;
+}
+.detail-body-right, .detail-body-left {
+    align-self: start;
+    line-height: 3.2rem;
+}
+.detail-body-bottom {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.detail-body-item {
+    color: chocolate;
+    font-weight: 600;
+}
+.detail-body-item span{
+    color: white;
+}
+/* */
+.detail-border {
+    cursor: pointer;
+    background-color: #2B3844;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    display: flex;
+    min-width: 10rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.detail-border:hover{
+    cursor: pointer;
+    color: chocolate;
+    transition: all 0.3s;
+}

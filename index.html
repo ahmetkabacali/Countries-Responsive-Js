@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <link rel="stylesheet" href="./src/css/media.css">
+    <link rel="stylesheet" href="#">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Countries</title>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h2 class="heading effected" onClick="backToMain()">Where in the world?</h2>
+            <div class="theme-box effected">
+                <i style="padding-right:0.5rem;" class="theme-icon"><i class="fa-solid fa-moon"></i></i>
+                <span class="theme-text">Dark Theme</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container countrylist__details">
+            <div class="search-filter">
+                <div class="search-bar">
+                    <label for="searchInput" class="searchInput"><i class="fa-solid fa-magnifying-glass"></i></label>
+                    <input type="text" id="searchInput" class="searchInput" placeholder="Search for a country...">
+                </div>
+                <div class="filter-box" onclick="regionBox()">
+                    <button id="regionSelect" class="region-filter" type="button" aria-expanded="false">Filter by Region
+                        <i class="fa-solid fa-angle-down"></i></button>
+                    <ul id="regionSelectDropdown" class="regionSelect-content hidden">
+                        <li class="region effected">Africa</li>
+                        <li class="region effected">Americas</li>
+                        <li class="region effected">Asia</li>
+                        <li class="region effected">Europe</li>
+                        <li class="region effected">Oceania</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="countryContainer" class="country-container"></div>
+        </div>
+    </main>
+    <script src="./src/js/main.js"></script>
+</body>
+
+
+</html>
