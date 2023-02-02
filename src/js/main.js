@@ -32,7 +32,7 @@ fetch(`https://restcountries.com/v3.1/all`)
         for (let index = 0; index < allCountries.length; index++) {
             const country = allCountries[index];
             countryContainer.innerHTML += `
-            <div country class="country">
+            <div  class="country">
                 <div class="country-header flag-wrapper"><img class="country-flag" src="${country.flag}" alt="CountryFlag"></div>
                 <div class="country-body country-content">
                     <div class="country-title">${country.name}</div>
@@ -45,7 +45,7 @@ fetch(`https://restcountries.com/v3.1/all`)
             </div>
         `
         }
-        return countryList = document.querySelectorAll("[country]")
+        return countryList = document.querySelectorAll(".country")
     })
 
 //******************* Region Fİlter */
