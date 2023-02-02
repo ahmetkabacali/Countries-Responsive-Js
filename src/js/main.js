@@ -168,15 +168,14 @@ function backToMain() {
 }
 
 //******************* theme-box */
+const head = document.querySelector("head")
 const themeBox = document.querySelector(".theme-box")
 const links = document.querySelectorAll('link')
 themeBox.addEventListener("click", (e) => {
-    links.forEach(link => {
-        if (link.getAttribute("href") == "./src/css/lightTheme.css") {
-            link.setAttribute("href", "./src/css/lightThemeHIDE.css")
-        } else {
-            link.setAttribute("href", "./src/css/lightTheme.css")
-        }
-    });
-
+    if (themeBox.classList.contains("theme-light")) {
+        document.querySelector('link[href="./src/css/lightTheme.css"]').remove()
+    } else {
+        head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="./src/css/lightTheme.css">')
+    }
+    themeBox.classList.toggle("theme-light")
 })
