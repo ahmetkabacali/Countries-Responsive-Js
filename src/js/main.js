@@ -18,7 +18,7 @@ fetch(`https://restcountries.com/v3.1/all`)
                 population: country.population,
                 region: country.region,
                 capital: country.capital,
-                flag: country.flags.svg,
+                flag: country.flags.png,
                 subregion: country.subregion,
                 languages: country.languages,
                 currencies: country.currencies,
@@ -99,6 +99,8 @@ function detailRender(controler) {
 }
 
 function displayCountryDetails(country) {
+    let language = ""
+    Object.values(country.languages).forEach(element => { language += element + ", " });
     const html = `
             <button id="backBtn"onClick="backToMain()"><i class="fa-solid fa-arrow-left-long hidden"></i> Back</button>
             <div id="countryDetail">
@@ -118,7 +120,7 @@ function displayCountryDetails(country) {
                         <div class="detail-body detail-body-right">
                             <div class="detail-body-item" id="topLevelDomain">Top Level Domain: <span>${country.topLevelDomain[0]}</span></div>
                             <div class="detail-body-item" id="currencies">Currencies: <span>${Object.values(country.currencies)[0].name}</span></div>
-                            <div class="detail-body-item" id="languages">Languages: <span>${Object.values(country.languages)}</span></div>
+                            <div class="detail-body-item" id="languages">Languages: <span>${language}</span></div>
                         </div>
                         <div class="detail-body detail-body-bottom">
                             <div class="detail-body-item" id="bordersBox">Border Countries: </div>
@@ -141,7 +143,7 @@ function displayCountryDetails(country) {
                     document.querySelector("#bordersBox").insertAdjacentHTML("afterEnd", `
                         <span class="detail-border">${border.name.common}</span>
                     `)
-                    filtered.push({ name: border.name.common, flag: border.flags.svg })
+                    filtered.push({ name: border.name.common, flag: border.flags.png })
                 })
                 return filtered;
 
@@ -167,14 +169,14 @@ function backToMain() {
 
 //******************* theme-box */
 const themeBox = document.querySelector(".theme-box")
-const links = document.querySelectorAll("link")
+const links = document.querySelectorAll('link')
 themeBox.addEventListener("click", (e) => {
-    for (const link of links) {
-        console.log(link.href)
-        if (link.href == "#") {
+    links.forEach(link => {
+        if (link.getAttribute("href") == "./src/css/lightTheme.css") {
+            link.setAttribute("href", "./src/css/lightThemeHIDE.css")
+        } else {
             link.setAttribute("href", "./src/css/lightTheme.css")
-        } else if (link.href == "./src/css/lightTheme.css") {
-            link.setAttribute("href", "#")
         }
-    }
+    });
+
 })

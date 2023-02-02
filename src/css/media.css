@@ -1,73 +1,125 @@
 @media(max-width: 1400px) {
     html {
         font-size: 9.5px;
-   }
+    }
+    /* body{padding-bottom: 2rem;} */
 }
+
 @media(max-width: 1250px) {
     html {
-        font-size: 8.5px;
-   }
+        font-size: 9px;
+    }
+
     .country-container {
         grid-template-columns: repeat(4, 1fr);
         gap: 4rem;
-   }
+    }
 }
+
 @media(max-width: 1000px) {
     html {
-        font-size: 10px;
-   }
+        font-size: 9px;
+    }
+
     .country-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem;
-   }
+    }
+    .country-details-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 5rem;
+    }
+    .country-detail-desc {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        display: grid;
+        gap: 2rem 7rem;
+        font-size: 1.6rem;
+    }
 }
+
 @media(max-width: 850px) {
     html {
         font-size: 9px;
-   }
+    }
+
     .country-container {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
-   }
+    }
 }
+
 @media(max-width: 730px) {
     html {
         font-size: 10px;
-   }
+    }
+
     .country-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
-   }
-    .search-filter{
+    }
+    .country-details-card {
+        grid-template-columns: auto;
+    }
+
+    .search-filter {
         flex-wrap: wrap;
-   }
+    }
 }
+
 @media(max-width: 576px) {
     html {
         font-size: 9px;
-   }
+    }
+
     .country-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
-   }
+    }
 }
+
 @media(max-width: 470px) {
     html {
         font-size: 8px;
-   }
-    .container{
-        padding-left: 3rem;
-        padding-right: 3rem;
-   }
+    }
+
+    .container {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
     .country-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
-   }
-    .search-filter{
+    }
+
+    .search-filter {
         flex-direction: column;
-   }
+    }
+
     .search-bar {
         width: 100%;
         margin-bottom: 1rem;
-   }
+    }
+
+    #backBtn {
+        color: white;
+        font-size: 1.4rem;
+        cursor: pointer;
+        width: 50%;
+        margin: 2rem 0;
+    }
+    .country-details-card {
+        grid-template-rows: 26vh auto;
+        gap: 3rem;
+    }
+    .detail-body-item{
+        font-size: 1.4rem;
+    }
+    .flag-wrapper {
+        height: auto;
+    }
+    
 }
