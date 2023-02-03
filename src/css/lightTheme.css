@@ -9,7 +9,9 @@ body {
 .filter-box,
 .search-bar,
 .region-filter,
-.regionSelect-content {
+.regionSelect-content,
+.detail-border,
+#backBtn {
     background-color: white;
     color: #111517;
 }

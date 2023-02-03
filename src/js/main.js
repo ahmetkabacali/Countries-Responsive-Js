@@ -161,7 +161,6 @@ function displayCountryDetails(country) {
             })
     }
 }
-
 //******************* Back Btn */
 function backToMain() {
     location.reload()
@@ -174,8 +173,16 @@ const links = document.querySelectorAll('link')
 themeBox.addEventListener("click", (e) => {
     if (themeBox.classList.contains("theme-light")) {
         document.querySelector('link[href="./src/css/lightTheme.css"]').remove()
+        themeBox.innerHTML = `
+        <i style="padding-right:0.5rem;" class="fa-solid fa-moon theme-icon"></i>
+        <span class="theme-text">Dark Theme</span>
+        `
     } else {
         head.insertAdjacentHTML("beforeend", '<link rel="stylesheet" href="./src/css/lightTheme.css">')
+        themeBox.innerHTML = `
+        <i style="padding-right:0.5rem;" class="fa-solid fa-sun theme-icon"></i>
+        <span class="theme-text">Light Theme</span>
+        `
     }
     themeBox.classList.toggle("theme-light")
 })

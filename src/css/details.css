@@ -14,7 +14,7 @@
     transition: all 0.3s;
 }
 #backBtn i {
-    margin-right: rem;
+    margin-right: 0.5rem;
     vertical-align: middle;
 }
 #countryDetail{
